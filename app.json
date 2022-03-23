@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "estudos-reactnative-gatito",
-    "slug": "estudos-reactnative-gatito",
+    "name": "gatito",
+    "slug": "gatito-pet-shop",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
