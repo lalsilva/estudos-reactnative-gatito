@@ -1,0 +1,52 @@
+Arguments: 
+  /home/lasilva35/.nvm/versions/node/v16.14.2/bin/node /usr/local/bin/yarnpkg install
+
+PATH: 
+  /home/lasilva35/.nvm/versions/node/v16.14.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/OpenJDK/openjdk-11.0.13_8/bin:/mnt/c/ProgramData/nvm:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files (x86)/Yarn/bin/:/mnt/c/Users/Luiz Alberto/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Luiz Alberto/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Luiz Alberto/AppData/Local/atom/bin:/mnt/c/Users/Luiz Alberto/AppData/Local/Microsoft/WindowsApps:/mnt/c/platform-tools/:/mnt/c/Users/Luiz Alberto/AppData/Local/Yarn/bin:/snap/bin:/usr/lib/jvm/jdk-17.0.2/bin:/home/lasilva35/.yarn/bin:/usr/lib/jvm/java-8-openjdk-amd64/bin:/home/lasilva35/Android/emulator:/home/lasilva35/Android/tools:/home/lasilva35/Android/tools/bin:/home/lasilva35/Android/platform-tools
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.14.2
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/expo: ETIMEDOUT
+      at Timeout._onTimeout (/usr/local/lib/node_modules/yarn/lib/cli.js:141543:19)
+      at listOnTimeout (node:internal/timers:559:17)
+      at processTimers (node:internal/timers:502:7)
+
+npm manifest: 
+  {
+    "name": "estudos-reactnative-gatito",
+    "version": "1.0.0",
+    "main": "node_modules/expo/AppEntry.js",
+    "scripts": {
+      "start": "expo start",
+      "android": "expo start --android",
+      "ios": "expo start --ios",
+      "web": "expo start --web",
+      "eject": "expo eject"
+    },
+    "dependencies": {
+      "expo": "~44.0.0",
+      "expo-status-bar": "~1.2.0",
+      "react": "17.0.1",
+      "react-dom": "17.0.1",
+      "react-native": "0.64.3",
+      "react-native-web": "0.17.1"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.12.9"
+    },
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
