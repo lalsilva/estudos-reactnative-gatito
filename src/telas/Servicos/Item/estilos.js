@@ -28,8 +28,7 @@ export default StyleSheet.create({
         borderBottomColor: cores.cinza,
     },
     carrinho: {
-        paddingHorizontal: 24,
-        paddingBottom: 24,
+        paddingTop: 24,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { TouchableOpacity, View, Text } from 'react-native';
 
+import ItemPadrao from '../../../componentes/ItemPadrao';
 import CampoInteiro from '../../../componentes/CampoInteiro';
 import Botao from '../../../componentes/Botao';
 
@@ -31,46 +32,42 @@ export default function Item({ nome, preco, descricao }) {
                 style={estilos.informacao}
                 onPress={inverteExpandir}
             >
-                <Text style={estilos.nome}>{nome}</Text>
-                <Text style={estilos.descricao}>{descricao}</Text>
-                <Text style={estilos.preco}>
-                    {
-                        Intl.NumberFormat('pt-BR', {
-                            style: 'currency',
-                            currency: 'BRL'
-                        }).format(preco)
-                    }
-                </Text>
-            </TouchableOpacity>
-            {expandir &&
-                <View style={estilos.carrinho}>
-                    <View>
-                        <View style={estilos.valor}>
-                            <Text style={estilos.descricao}>Quantidade:</Text>
-                            <CampoInteiro
-                                estilos={estilos.quantidade}
-                                valor={quantidade}
-                                acao={atualizaQuanitadeTotal}
-                            />
+                <ItemPadrao
+                    nome={nome}
+                    preco={preco}
+                    descricao={descricao}
+                >
+                {expandir &&
+                    <View style={estilos.carrinho}>
+                        <View>
+                            <View style={estilos.valor}>
+                                <Text style={estilos.descricao}>Quantidade:</Text>
+                                <CampoInteiro
+                                    estilos={estilos.quantidade}
+                                    valor={quantidade}
+                                    acao={atualizaQuanitadeTotal}
+                                />
+                            </View>
+                            <View style={estilos.valor}>
+                                <Text style={estilos.descricao}>Total:</Text>
+                                <Text style={estilos.preco}>
+                                    {
+                                        Intl.NumberFormat('pt-BR', {
+                                            style: 'currency',
+                                            currency: 'BRL'
+                                        }).format(total)
+                                    }
+                                </Text>
+                            </View>
                         </View>
-                        <View style={estilos.valor}>
-                            <Text style={estilos.descricao}>Total:</Text>
-                            <Text style={estilos.preco}>
-                                {
-                                    Intl.NumberFormat('pt-BR', {
-                                        style: 'currency',
-                                        currency: 'BRL'
-                                    }).format(total)
-                                }
-                            </Text>
-                        </View>
+                        <Botao
+                            valor='Adicionar ao Carrinho'
+                            acao={() => { }}
+                        />
                     </View>
-                    <Botao
-                        valor='Adicionar ao Carrinho'
-                        acao={() => { }}
-                    />
-                </View>
-            }
+                }
+                </ItemPadrao>
+            </TouchableOpacity>
             <View style={estilos.divisor} />
         </>
     );
